@@ -1,4 +1,4 @@
-import {MdAutoFixHigh} from 'react-icons/md'
+import {MdAutoFixHigh} from 'react-icons/md/index'
 
 export default function Modal ({toggle}: {toggle: Function}) {
   return (
