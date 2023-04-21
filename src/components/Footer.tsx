@@ -9,7 +9,7 @@ export default function Footer ({showFAQ}: {showFAQ: Function}) {
                     </a>
                 </li>
                 <li className="my-2">
-                    <a className="text-gray-400 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors duration-200" href="#">
+                    <a className="text-gray-400 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors duration-200" target="_blank" href="https://github.com/Lazajs/Speller">
                         Github
                     </a>
                 </li>

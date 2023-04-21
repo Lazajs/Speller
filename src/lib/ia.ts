@@ -49,7 +49,7 @@ Correct sample:`,
   const lang = await language.json()
   const langCode = lang.results[0].language_code
   if (langCode !== 'en') throw new Error('Language not supported.')
-  if (prompt.length > 200) throw new Error('Prompt too long, please shorten it to 200 characters or less.')
+  if (prompt.length > 200) throw new Error('Text too long, please shorten it to 200 characters or less.')
 
   const OPTIONS = {
     method: 'POST',

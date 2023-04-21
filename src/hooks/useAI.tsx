@@ -26,6 +26,10 @@ export default function useAI() {
         .trim()
         )
     } catch (error) {
+      // Workaround for unhandled promise rejection
+      if (error.message.includes('Failed to fetch')) {
+        handleError({message: 'Something failed. If this persists please contact the developer.'})
+      }
       handleError(error)
     } finally {
       isLoading(false)

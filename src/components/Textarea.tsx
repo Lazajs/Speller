@@ -15,7 +15,7 @@ export default function Textarea () {
   }
 
   useEffect(()=> {
-    if (response && response !== value) {
+    if (response) {
       setValue(response)
       setSolved(true)
       const timer = setTimeout(() => {
@@ -35,7 +35,7 @@ export default function Textarea () {
     <>
       <label className="text-gray-700 mt-4" htmlFor="name">
         {/** @ts-expect-error **/}
-        <textarea onChange={handleChange} value={value} className={`flex-1 w-full resize-none px-4 py-2 text-gray-700 placeholder-gray-400 bg-white border ${solved ? 'border-green-600' : 'border-gray-300'} rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent text-lg`} id="comment" placeholder="Your ugly text..." name="comment"  rows="13" cols="50">
+        <textarea onChange={handleChange} value={value} className={`flex-1 w-full resize-none px-4 py-2 text-gray-700 placeholder-gray-400 bg-white border-[3px] ${solved ? 'border-green-600' : 'border-gray-300'} rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent text-lg`} id="comment" placeholder="Your ugly text..." name="comment"  rows="13" cols="50">
         </textarea>
       </label>
       {error && <p className="text-red-500 text-xl font-bold m-2 text-center italic">{error.message}</p>}
